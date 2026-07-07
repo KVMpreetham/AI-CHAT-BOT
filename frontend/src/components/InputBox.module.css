@@ -1,0 +1,96 @@
+.inputForm {
+  padding: 16px 24px;
+  background: transparent;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(17, 24, 37, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 26px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.inputContainer:focus-within {
+  border-color: var(--accent-light);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-main);
+  font-size: 15px;
+  font-family: inherit;
+  resize: none;
+  padding: 8px 4px;
+  max-height: 120px;
+  min-height: 20px;
+  line-height: 1.4;
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.iconButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+}
+
+.sendButton {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.sendButton.active {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+
+.sendButton.active:hover {
+  background: var(--accent-light);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.sendButton:disabled:not(.active) {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
